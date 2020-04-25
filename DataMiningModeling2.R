@@ -14,7 +14,7 @@ dbListTables(db) # inventory_sales is the table
 df<-data.frame(dbGetQuery(db, 'select * from inventory_sales')) #[1] 942 rows 7 variables
 str(df)
 
-# narrow does to relevant columns
+# narrow down to relevant columns
 df<-select(df, Sale, Stock, Season, StockLevel) #[1] 942 rows 4 variables
 head(df)
 str(df)
@@ -63,37 +63,4 @@ par(mfrow=c(1,2))
 prp(T1, main= "Tree_Train")
 prp(T2, main= "Tree_Test")
 
-# and it looks like the model approves of what we did as the test came at %96 and training at 98% accuracy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# and it looks like the model approves of what we did as the test came at 96% and training at 98% accuracy
